@@ -250,5 +250,18 @@
             "stopAtEntry": false
         },
 
+        {
+            "name": "journal",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-final-Foundation4",
+            "program": "${workspaceFolder}/teamactivityjournal/bin/Debug/net8.0/Foundation4.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/final/Foundation4",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+
     ]
 }
