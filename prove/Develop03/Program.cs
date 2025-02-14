@@ -1,9 +1,17 @@
 using System;
+using static System.Net.Mime.MediaTypeNames;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        string inputtext="continue";
+    
+    while (inputtext !="quit"){
+        Console.WriteLine("scripture ref here");
+        inputtext = Console.ReadLine();
+        Console.Clear();
+    }
+    
     }
 }
