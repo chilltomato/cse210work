@@ -29,15 +29,13 @@ class Program
         Console.Clear();
         if (File.Exists(path)) // Ensure the file exists
         {
-            List<String> scriptureref = new List<string>();
-            List<String> savedscriptureref = new List<string>();
+            List<String> scriptureref = new List<string>();            
             string inputtext="continue";
             string verse = "1.3";
             bool all_hidden = false;
             string savedchapter = "0";
             string savedbook = string.Empty;            
-            scripture.Getmearef(path, out savedscriptureref, out verse, out savedchapter, out savedbook);
-            scriptureref = new List<string>(savedscriptureref);
+            scripture.Getmearef(path, out scriptureref, out verse, out savedchapter, out savedbook);
 
             while (inputtext !="quit" && all_hidden == false){
                 if (inputtext != "quit" && all_hidden == false)
@@ -66,7 +64,7 @@ class Program
                     Console.WriteLine("tell your friends, they will be impressed.");
                     Console.WriteLine("at least I think so.");
                 }
-                scripture.setituptosave(savedscriptureref, path, verse, savedchapter, savedbook);
+                scripture.setituptosave(scriptureref, path, verse, savedchapter, savedbook);
             }
             else
             {
