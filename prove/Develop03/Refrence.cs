@@ -39,8 +39,10 @@ public void HaveVerseRef(string versefilelocation, out List<string> verseWords, 
         if (parts.Length >= 4) // Ensure we have at least book, chapter, verse, and some words
         {
             bookOut = parts[0]; // Book is from the first part
+            book = bookOut; // Assign to the field 'book'
             chapterOut = parts[1]; // Chapter as string
             verseOut = parts[2]; // Verse as string
+            chapter = chapterOut; // Assign to the field 'chapter'
 
             List<string> otherverseWords = parts.Skip(3).ToList(); // The remaining words are the verse text
             verseWords.AddRange(otherverseWords); // Add the words to the list

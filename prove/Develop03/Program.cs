@@ -29,28 +29,23 @@ class Program
         Console.Clear();
         if (File.Exists(path)) // Ensure the file exists
         {
-            List<String> scriptureref = new List<string>();            
-            string inputtext="continue";
-            string verse = "1.3";
+            List<String> scriptureref;            
+            string inputtext="";
+            string verse;
             bool all_hidden = false;
-            string savedchapter = "0";
-            string savedbook = string.Empty;            
+            string savedchapter;
+            string savedbook;   
             scripture.Getmearef(path, out scriptureref, out verse, out savedchapter, out savedbook);
 
-            while (inputtext !="quit" && all_hidden == false){
-                if (inputtext != "quit" && all_hidden == false)
+            while (inputtext !="quit" && !all_hidden){
+                if (inputtext != "quit" && !all_hidden)
                 {
-                    all_hidden = scripture.isCompletelyHidden(scriptureref);
-                    Console.WriteLine($"\n{savedbook} {savedchapter}:{verse}");
-                    for (int i = 0; i < scriptureref.Count; i++)
-                    {
-                        Thread.Sleep(200);
-                        Console.Write($"{scriptureref[i]} ");
-                    }
-                    Console.WriteLine("");
-                    inputtext = Console.ReadLine();
-                    scripture.HideWords(ref scriptureref);
-                    Console.Clear();
+                scripture.DisplayVerse();
+                inputtext = Console.ReadLine();
+
+                scripture.HideWords();
+                all_hidden = scripture.isCompletelyHidden(); // Now correctly updates
+                Console.Clear();
                 }
                 else
                 {
