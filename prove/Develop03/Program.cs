@@ -40,11 +40,11 @@ class Program
             while (inputtext !="quit" && !all_hidden){
                 if (inputtext != "quit" && !all_hidden)
                 {
+                all_hidden = scripture.isCompletelyHidden(); // Now correctly updates
                 scripture.DisplayVerse();
                 inputtext = Console.ReadLine();
 
                 scripture.HideWords();
-                all_hidden = scripture.isCompletelyHidden(); // Now correctly updates
                 Console.Clear();
                 }
                 else

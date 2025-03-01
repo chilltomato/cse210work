@@ -1,9 +1,8 @@
-using System;
-
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello Develop04 World!");
+        ActivityInput activityInput = new ActivityInput();
+        activityInput.StartActivity();
     }
 }
