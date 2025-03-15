@@ -26,11 +26,11 @@ class Program
                 case "1":
                     if (goals.Count == 0)
                     {
-                        Console.WriteLine("You don't have any goals yet. Add some first!");
+                        Console.WriteLine("Excuse me but you don't have any goals rn!");
                         break;
                     }
 
-                    Console.WriteLine("Which goal did you complete?");
+                    Console.WriteLine("Which goal have you completed?");
                     for (int i = 0; i < goals.Count; i++)
                     {
                         Console.WriteLine($"{i + 1}. {goals[i].GoalName} ({goals[i].GetType().Name})");
@@ -41,7 +41,7 @@ class Program
                     {
                         float earned = goals[choice - 1].RecordEvent();
                         totalScore += earned;
-                        Console.WriteLine($"You earned {earned} points!");
+                        Console.WriteLine($"You earned {earned} points for completing the goal '{goals[choice - 1].GoalName}'!");
 
                         var completionTime = goals[choice - 1].GetCompletionTime();
                         if (completionTime != "Not completed yet")
@@ -58,7 +58,7 @@ class Program
                 case "2":
                     if (goals.Count == 0)
                     {
-                        Console.WriteLine("You don't have any goals yet. Add some first!");
+                        Console.WriteLine("Excuse me but you don't have any goals rn!");
                         break;
                     }
 
@@ -88,10 +88,10 @@ class Program
                     break;
 
                 case "5":
-                    Console.Write("Enter goal type (simple/eternal/multi): ");
+                    Console.Write("what goal type do you want? (simple/eternal/multi) ");
                     string gtype = Console.ReadLine().ToLower();
 
-                    Console.Write("What name do you want the goal to have: ");
+                    Console.Write("What should the goal be called? ");
                     string name = Console.ReadLine();
 
                     Console.Write("Enter points: ");
@@ -111,14 +111,14 @@ class Program
                     }
                     else if (gtype == "multi")
                     {
-                        Console.Write("Enter how many times to complete it: ");
+                        Console.Write("how many times do you need to record it before it's completed? ");
                         if (!int.TryParse(Console.ReadLine(), out int required))
                         {
                             Console.WriteLine("Invalid input for required times.");
                             break;
                         }
 
-                        Console.Write("Enter bonus points after completion: ");
+                        Console.Write("how many bonus points will you recive after completing it? ");
                         if (!float.TryParse(Console.ReadLine(), out float bonus))
                         {
                             Console.WriteLine("Invalid bonus input.");
