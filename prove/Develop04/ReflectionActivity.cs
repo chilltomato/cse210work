@@ -40,7 +40,7 @@ public class ReflectingActivity : Activity
         while (elapsedTime < Duration)
         {
             Console.WriteLine(ReflectQuestions[rand.Next(ReflectQuestions.Count)]);
-            Anim.ShowLoadingAnim(3);            
+            Anim.ShowLoadingAnim(3,1);            
             elapsedTime += 3;
         }
 

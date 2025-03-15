@@ -16,15 +16,15 @@ public abstract class Activity
     {
         Console.WriteLine("\nStarting activity...");
         Console.WriteLine(Descriptions[0]);
-        Anim.ShowLoadingAnim(5);            
+        Anim.ShowLoadingAnim(5, 0);            
         Console.Clear();
     }
 
     public virtual void End()
     {
-        Console.WriteLine("Activity completed. Well done!\n");
-        Console.WriteLine("Bringing you back to choose again\n");
-        Anim.ShowLoadingAnim(5);            
+        Console.WriteLine("\nActivity completed. Well done!");
+        Console.WriteLine("\nBringing you back to choose again\n");
+        Anim.ShowLoadingAnim(5, 0);            
         Console.Clear();
 
     }

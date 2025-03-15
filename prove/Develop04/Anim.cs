@@ -1,8 +1,15 @@
 public static class Anim
 {
-    public static void ShowLoadingAnim(int durationInSeconds)
+    public static void ShowLoadingAnim(int durationInSeconds, int animationId)
     {
-        string[] AnimFrames = { "0", "o", "-", "o" };
+        string[][] animations = {
+            new string[] { "|", "/", "-", "\\" },
+            new string[] { "0", "o", "-", "o" },
+            new string[] { "0", "o", "o", "o" },
+            new string[] { "o", "0", "0", "0" },
+        };
+
+        string[] AnimFrames = animations[animationId % animations.Length];
         int counter = 0;
 
         DateTime endTime = DateTime.Now.AddSeconds(durationInSeconds);

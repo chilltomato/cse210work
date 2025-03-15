@@ -31,7 +31,7 @@ public class ListingActivity : Activity
         Random rand = new Random();
         Console.WriteLine($"\n list as many answers as you can to the question {ListingPrompts[rand.Next(ListingPrompts.Count)]} \n");
         Console.WriteLine("You have " + Duration + " seconds. Start listing!");
-        Anim.ShowLoadingAnim(2);            
+        Anim.ShowLoadingAnim(2,1);            
 
         int elapsedTime = 0;
 

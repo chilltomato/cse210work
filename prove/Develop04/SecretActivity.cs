@@ -23,12 +23,12 @@ public class SecretActivity : Activity
         Thread.Sleep(500);
         Console.WriteLine($"'{answer}'");
         Thread.Sleep(500);
-        Console.WriteLine($"'reflect on why you like that word for the next {Duration} seconds'");
-        Anim.ShowLoadingAnim(Duration);           
+        Console.WriteLine($"reflect on why you like that word for the next {Duration} seconds");
+        Anim.ShowLoadingAnim(Duration, 1);           
         Console.WriteLine($"what did you think? liked anything in particular?");
         Thread.Sleep(500);
         Console.WriteLine($"wasted too much of your time, we'll meet again.");
-        Anim.ShowLoadingAnim(5);            
+        Anim.ShowLoadingAnim(5, 0);            
 
         End();
     }
