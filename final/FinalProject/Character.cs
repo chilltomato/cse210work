@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 class Character
 {
-    public string Name { get; private set; }
-    public string Gender { get; private set; }
-    public int Age { get; private set; }
-    public string Birthday { get; private set; }
-    public string Element { get; private set; }
-    public List<string> Quotes { get; private set; }
-
+    public string Name { get;  set; }
+    public string Gender { get;  set; }
+    public int Age { get;  set; }
+    public string Birthday { get;  set; }
+    public string Element { get;  set; }
+    public List<string> Quotes { get; set; }
+    
     // Constructor to initialize character
     public Character(string name, string gender, string birthday, string element)
     {
