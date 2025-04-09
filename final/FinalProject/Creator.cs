@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 class Creator
 {
-    // No code needed here; simply remove the method definition.
-
     public Creator()
     {
     }
